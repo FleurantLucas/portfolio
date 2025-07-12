@@ -1,13 +1,13 @@
-<header [@fadeIn]>
+<header>
     <div class="header-container">
-        <a href="/" class="logo">Lucas Fleurant - Portfolio</a>
+        <a href="/" class="logo" [@fadeIn]>Lucas Fleurant - Portfolio</a>
         <nav>
             <ul>
-                <li><a href="#apropos">À propos</a></li>
-                <li><a href="#competences">Compétences</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li class="separator">|</li>
-                <li><a href="/projects">Projets</a></li>
+                <li><a href="#apropos" [@fadeIn]>À propos</a></li>
+                <li><a href="#competences" [@fadeIn]>Compétences</a></li>
+                <li><a href="#contact" [@fadeIn]>Contact</a></li>
+                <li class="separator" [@fadeIn]>|</li>
+                <li><a routerLink="/projects" [@fadeIn]>Projets</a></li>
             </ul>
         </nav>
     </div>
@@ -26,17 +26,15 @@
         <div class="footer-section">
             <h3>Réseaux Sociaux</h3>
             <div class="social-links">
-                <a href="#" title="LinkedIn">💼</a>
-                <a href="#" title="GitHub">🐙</a>
-                <a href="#" title="Twitter">🐦</a>
-                <a href="#" title="Portfolio">🌐</a>
+                <a href="https://www.linkedin.com/in/lucas-fleurant/" title="LinkedIn">💼</a>
+                <a href="https://github.com/FleurantLucas" title="GitHub">🐙</a>
             </div>
         </div>
 
         <div class="footer-section">
             <h3>Navigation</h3>
-            <p><a href="/">Accueil</a></p>
-            <p><a href="/projects">Projets</a></p>
+            <p><a routerLink="/">Accueil</a></p>
+            <p><a routerLink="/projects">Projets</a></p>
         </div>
     </div>
 
