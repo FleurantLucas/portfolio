@@ -1,0 +1,46 @@
+.intro-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  padding: 40px;
+  background-color: #f4f4f4;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.intro-text {
+  flex: 2 1 400px;
+}
+
+.intro-text h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.intro-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.05rem;
+}
+
+.contact-list li {
+  margin-bottom: 10px;
+}
+
+.contact-list a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}

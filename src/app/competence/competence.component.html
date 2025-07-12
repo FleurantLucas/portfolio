@@ -1,3 +1,20 @@
-<p>
-  competence works!
-</p>
+<div class="intro-section" id="competences">
+  <div class="intro-text">
+    <h1>Mes Compétences</h1>
+
+    <div class="skills-list">
+      <div class="row">
+        
+        <div class="skill col-12 col-md-6 mb-4" *ngFor="let skill of skills">
+          <span>{{ skill.name }}</span>
+          <div class="bar-container">
+            <ng-container *ngFor="let bar of [].constructor(10); let i = index">
+              <div class="bar" [ngClass]="{ 'filled': i < skill.level }"></div>
+            </ng-container>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
