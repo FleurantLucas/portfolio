@@ -36,6 +36,7 @@
   margin-bottom: 20px;
   color: #333;
 }
+
 .skills-list {
   display: flex;
   flex-direction: column;
@@ -45,35 +46,157 @@
 
 .skill {
   display: flex;
-  align-items: center;
-  gap: 15px;
+  flex-direction: column;
+  gap: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.skill span {
-  width: 100px;
+.skill-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 40px;
+}
+
+.skill-name {
+  min-width: 80px;
   font-weight: bold;
   color: #333;
+  flex-shrink: 0;
+}
+
+.toggle-btn {
+  min-width: 30px;
+  min-height: 30px;
+  padding: 0;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.toggle-btn:active {
+  background-color: #e0e0e0;
 }
 
 .bar-container {
   display: flex;
-  gap: 8px; /* More spacing between bars */
-  height: 20px; /* Less height */
+  gap: 6px;
+  height: 20px;
   align-items: center;
+  flex-wrap: wrap;
+  min-width: 0;
+  flex: 1;
 }
 
 .bar {
-  width: 20px;         /* More square */
-  height: 20px;
+  width: 18px;
+  height: 18px;
   background-color: #ddd;
   border-radius: 3px;
   transition: background 0.3s;
+  flex-shrink: 0;
 }
 
 .bar.filled {
   background-color: #007acc;
   box-shadow: 0 0 4px #007acc88;
+}
+
+.skill-text {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 8px;
+  padding: 8px 12px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  line-height: 1.4;
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 768px) {
+  .intro-section {
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .intro-text h1 {
+    font-size: 1.5rem;
+  }
+  
+  .intro-text p {
+    font-size: 1rem;
+  }
+  
+  .skills-list {
+    gap: 15px;
+  }
+  
+  .skill-row {
+    gap: 8px;
+  }
+  
+  .skill-name {
+    min-width: 60px;
+    font-size: 0.9rem;
+  }
+  
+  .bar-container {
+    gap: 4px;
+  }
+  
+  .bar {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .toggle-btn {
+    min-width: 28px;
+    min-height: 28px;
+    font-size: 14px;
+  }
+  
+  .skill-text {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-section {
+    padding: 15px;
+    gap: 15px;
+  }
+  
+  .intro-text h1 {
+    font-size: 1.3rem;
+  }
+  
+  .skill-row {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  
+  .bar-container {
+    width: 100%;
+    order: 3;
+    margin-top: 5px;
+  }
+  
+  .skill-name {
+    flex: 1;
+    min-width: auto;
+  }
 }
 

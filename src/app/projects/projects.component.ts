@@ -37,9 +37,16 @@ export const projects: Project[] = [
   {
     title: 'Jeu de Cartes en Ligne',
     description: 'Un jeu de cartes multijoueur développé avec Angular et ASP.Net',
-    image: 'assets/images/card-game.png',
+    image: '',
     link: '',
-    tags: ['Angular', 'Node.js', 'WebSocket']
+    tags: ['Angular', 'ASP.NET', 'École']
+  },
+  {
+    title: 'Application de commande de nourriture',
+    description: 'Une application mobile et web pour commander de la nourriture sur le campus du cegep',
+    image: '',
+    link: '',
+    tags: ['Angular', 'ASP.NET', 'Flutter', 'École']
   },
   // ...ajoute plus ici
 ];

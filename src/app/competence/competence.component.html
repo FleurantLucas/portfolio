@@ -5,14 +5,23 @@
     <div class="skills-list">
       <div class="row">
         
-        <div class="skill col-12 col-md-6 mb-4" *ngFor="let skill of skills">
-          <span>{{ skill.name }}</span>
-          <div class="bar-container">
-            <ng-container *ngFor="let bar of [].constructor(10); let i = index">
-              <div class="bar" [ngClass]="{ 'filled': i < skill.level }"></div>
-            </ng-container>
-          </div>
-        </div>
+        
+<div class="skill col-12 col-md-6" *ngFor="let skill of skills">
+  <div class="skill-row">
+    <button class="btn toggle-btn" (click)="skill.showDescription = !skill.showDescription">
+      {{ skill.showDescription ? '-' : '+' }}
+    </button>
+    <span class="skill-name">{{ skill.name }}</span>
+    <div class="bar-container">
+      <ng-container *ngFor="let bar of [].constructor(10); let i = index">
+        <div class="bar" [ngClass]="{ 'filled': i < skill.level }"></div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="skill-text" *ngIf="skill.showDescription">
+    {{ skill.description }}
+  </div>
+</div>
 
       </div>
     </div>
