@@ -198,5 +198,12 @@
     flex: 1;
     min-width: auto;
   }
+  .bar{
+  width: 5px;
+}
+
+  .bar.filled {
+  width: 5px;
+}
 }
 
